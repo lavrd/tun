@@ -3,6 +3,8 @@ name = "tun"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+libc = { version = "0.2.150", features = ["std"], default-features = false }
+ipnet = { version = "2.9.0", features = ["std"], default-features = false }
+log = { version = "0.4.20", features = [], default-features = false }
+env_logger = { version = "0.10.1", features = ["auto-color", "humantime"], default-features = false }
