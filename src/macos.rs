@@ -42,12 +42,14 @@ struct ifreq {
 }
 
 #[repr(C)]
+#[allow(non_camel_case_types)]
 union ifr_name {
     name: [c_char; IFNAMSIZ],
 }
 
 #[repr(C)]
 #[derive(Clone, Copy)]
+#[allow(non_camel_case_types)]
 union ifr_ifru {
     ifru_addr: sockaddr,
     ifru_dstaddr: sockaddr,
